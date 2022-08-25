@@ -1,4 +1,4 @@
-package options
+package common
 
 // swagger:response CommentedResponse
 // CommentedResponseWrapper ...
