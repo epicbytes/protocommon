@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 import "google/protobuf/descriptor.proto";
-package protocommon.options;
-option go_package = "github.com/epicbytes/protocommon/options";
+package options;
+option go_package = "./options";
 
 message ParserOption {
   bool fiber = 1;
