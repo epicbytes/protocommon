@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/descriptor.proto";
 package common;
-option go_package = "github.com/epicbytes/protocommon/common";
+option go_package = "github.com/epicbytes/protocommon/common;common";
 
 message ParserOption {
   bool fiber = 1;
@@ -10,12 +10,17 @@ message ParserOption {
   bool paging = 3;
 }
 
+message ModelFeature {
+  bool keeper = 1;
+}
+
 extend google.protobuf.MessageOptions {
   optional ParserOption parser = 50000;
+  optional ModelFeature model_feature = 50001;
 }
 
 extend google.protobuf.FieldOptions {
-  optional ModelFieldOption field_option = 50001;
+  optional ModelFieldOption field_option = 50002;
 }
 
 message ModelFieldOption {
@@ -23,6 +28,8 @@ message ModelFieldOption {
   optional bool is_required = 2;
   optional string validate = 3;
   optional string tags = 4;
+  optional bool is_crypto = 5;
+  optional bool is_repeated = 6;
 }
 
 // swagger:model AvailableProvider
