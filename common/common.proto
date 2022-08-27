@@ -8,10 +8,12 @@ message ParserOption {
   bool fiber = 1;
   bool swag = 2;
   bool paging = 3;
+  bool list = 4;
 }
 
 message ModelFeature {
   bool keeper = 1;
+  string keeper_key = 2;
 }
 
 extend google.protobuf.MessageOptions {
