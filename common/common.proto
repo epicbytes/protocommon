@@ -9,6 +9,10 @@ message ParserOption {
   bool swag = 2;
   bool paging = 3;
   bool list = 4;
+  bool merge = 5;
+  string merge_from = 6;
+  bool pick = 7;
+  string pick_with = 8;
 }
 
 message ModelFeature {
@@ -26,12 +30,8 @@ extend google.protobuf.FieldOptions {
 }
 
 message ModelFieldOption {
-  optional string source = 1;
-  optional bool is_required = 2;
-  optional string validate = 3;
-  optional string tags = 4;
-  optional bool is_crypto = 5;
-  optional bool is_repeated = 6;
+  optional bool merged = 1;
+  optional bool picked = 2;
 }
 
 // swagger:model AvailableProvider
