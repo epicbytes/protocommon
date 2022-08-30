@@ -79,3 +79,9 @@ message FileRequest {
   // In: formData
   string fileName = 3;
 }
+
+// swagger:model ErrorMessage
+message ErrorMessage {
+  int32 code = 1;
+  string error = 2;
+}

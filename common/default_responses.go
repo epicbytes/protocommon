@@ -17,11 +17,11 @@ type FileResponseWrapper struct {
 // swagger:response ErrorResponse
 type GeneralErrorWrapper struct {
 	// in: body
-	Body interface{}
+	Body *ErrorMessage
 }
 
 // swagger:response ErrorValidation
 type GeneralValidationErrorWrapper struct {
 	// in: body
-	Body interface{}
+	Body *ErrorMessage
 }
