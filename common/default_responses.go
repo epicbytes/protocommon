@@ -1,27 +1,27 @@
 package common
 
-// swagger:response CommentedResponse
+// swagger:response CommentedResponseWrapper
 // CommentedResponseWrapper ...
 type CommentedResponseWrapper struct {
 	// in:body
-	Body *CommentedResponse
+	Body CommentedResponse
 }
 
-// swagger:response FileResponse
+// swagger:response FileResponseWrapper
 // FileResponseWrapper ...
 type FileResponseWrapper struct {
 	// in:body
-	Body *FileResponse
+	Body FileResponse
 }
 
-// swagger:response ErrorResponse
+// swagger:response ErrorResponseWrapper
 type GeneralErrorWrapper struct {
 	// in: body
-	Body *ErrorMessage
+	Body ErrorMessage
 }
 
-// swagger:response ErrorValidation
+// swagger:response ErrorValidationWrapper
 type GeneralValidationErrorWrapper struct {
 	// in: body
-	Body *ErrorMessage
+	Body ErrorMessage
 }

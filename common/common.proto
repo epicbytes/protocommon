@@ -45,14 +45,14 @@ message AvailableProvider {
   string provider_type = 3;
 }
 
-// swagger:model Pagination
+// swagger:model pagination
 message Pagination {
   int64 limit = 1;
   int64 skip = 2;
   int64 total_items = 3;
 }
 
-// swagger:model CommentedResponse
+// swagger:model commentedResponse
 message CommentedResponse {
   // required: true
   bool result = 1;
@@ -60,7 +60,7 @@ message CommentedResponse {
   string comment = 2;
 }
 
-// swagger:model FileResponse
+// swagger:model fileResponse
 message FileResponse {
   // required: true
   bytes file = 1;
@@ -68,7 +68,7 @@ message FileResponse {
   string mimeType = 2;
 }
 
-// swagger:parameters FileRequest
+// swagger:parameters fileRequest
 message FileRequest {
   // required: true
   // In: formData
@@ -80,7 +80,7 @@ message FileRequest {
   string fileName = 3;
 }
 
-// swagger:model ErrorMessage
+// swagger:model errorMessage
 message ErrorMessage {
   int32 code = 1;
   string error = 2;

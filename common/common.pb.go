@@ -309,7 +309,7 @@ func (x *AvailableProvider) GetProviderType() string {
 	return ""
 }
 
-// swagger:model Pagination
+// swagger:model pagination
 type Pagination struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -373,7 +373,7 @@ func (x *Pagination) GetTotalItems() int64 {
 	return 0
 }
 
-// swagger:model CommentedResponse
+// swagger:model commentedResponse
 type CommentedResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -431,7 +431,7 @@ func (x *CommentedResponse) GetComment() string {
 	return ""
 }
 
-// swagger:model FileResponse
+// swagger:model fileResponse
 type FileResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -489,7 +489,7 @@ func (x *FileResponse) GetMimeType() string {
 	return ""
 }
 
-// swagger:parameters FileRequest
+// swagger:parameters fileRequest
 type FileRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -558,7 +558,7 @@ func (x *FileRequest) GetFileName() string {
 	return ""
 }
 
-// swagger:model ErrorMessage
+// swagger:model errorMessage
 type ErrorMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
