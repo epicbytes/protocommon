@@ -20,6 +20,29 @@ message ModelFeature {
   string keeper_key = 2;
 }
 
+message MethodOption {
+  bool hasActivity = 1;
+}
+
+message ServiceOption {
+  string name_prefix = 1;
+  string name = 2;
+  string name_suffix = 3;
+  string local_port = 4;
+  string service_port = 5;
+  string log_level = 6;
+  bool feature_ci = 7;
+  bool enable = 8;
+}
+
+extend google.protobuf.FileOptions {
+  optional ServiceOption service = 50004;
+}
+
+extend google.protobuf.MethodOptions {
+  optional MethodOption option = 50003;
+}
+
 extend google.protobuf.MessageOptions {
   optional ParserOption parser = 50000;
   optional ModelFeature model_feature = 50001;
@@ -45,14 +68,14 @@ message AvailableProvider {
   string provider_type = 3;
 }
 
-// swagger:model pagination
+// swagger:model Pagination
 message Pagination {
   int64 limit = 1;
   int64 skip = 2;
   int64 total_items = 3;
 }
 
-// swagger:model commentedResponse
+// swagger:model CommentedResponse
 message CommentedResponse {
   // required: true
   bool result = 1;
@@ -60,7 +83,7 @@ message CommentedResponse {
   string comment = 2;
 }
 
-// swagger:model fileResponse
+// swagger:model FileResponse
 message FileResponse {
   // required: true
   bytes file = 1;
@@ -68,7 +91,7 @@ message FileResponse {
   string mimeType = 2;
 }
 
-// swagger:parameters fileRequest
+// swagger:parameters FileRequest
 message FileRequest {
   // required: true
   // In: formData
@@ -80,8 +103,14 @@ message FileRequest {
   string fileName = 3;
 }
 
-// swagger:model errorMessage
+// swagger:model ErrorResponse
 message ErrorMessage {
+  int32 code = 1;
+  string error = 2;
+}
+
+// swagger:model ErrorValidation
+message ErrorValidation {
   int32 code = 1;
   string error = 2;
 }
