@@ -32,6 +32,10 @@ message DesignField {
   string source = 5;
 }
 
+message DesignFields {
+  repeated DesignField items = 1;
+}
+
 message ServiceOption {
   string name_prefix = 1;
   string name = 2;
