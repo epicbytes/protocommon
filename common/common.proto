@@ -24,18 +24,6 @@ message MethodOption {
   bool hasActivity = 1;
 }
 
-message DesignField {
-  string name = 1;
-  int32 size = 2;
-  string type = 3;
-  string field_type = 4;
-  string source = 5;
-}
-
-message DesignFields {
-  repeated DesignField items = 1;
-}
-
 message ServiceOption {
   string name_prefix = 1;
   string name = 2;
@@ -68,6 +56,20 @@ message ModelFieldOption {
   optional bool merged = 1;
   optional bool picked = 2;
   optional string source = 3;
+}
+
+// swagger:model DesignField
+message DesignField {
+  string name = 1;
+  int32 size = 2;
+  string type = 3;
+  string field_type = 4;
+  string source = 5;
+}
+
+// swagger:model DesignFields
+message DesignFields {
+  repeated DesignField items = 1;
 }
 
 // swagger:model AvailableProvider
