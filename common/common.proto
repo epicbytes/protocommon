@@ -56,6 +56,7 @@ message ModelFieldOption {
   optional bool merged = 1;
   optional bool picked = 2;
   optional string source = 3;
+  optional string type = 4;
 }
 
 // swagger:model DesignField
