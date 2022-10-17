@@ -75,6 +75,13 @@ message DesignFields {
   google.protobuf.Any values = 2;
 }
 
+// swagger:parameters DesignFieldsRequest
+message DesignFieldsRequest {
+  // required: true
+  // in: query
+  uint32 id = 1;
+}
+
 // swagger:model AvailableProvider
 message AvailableProvider {
   // required: true
