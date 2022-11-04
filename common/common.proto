@@ -75,6 +75,30 @@ message DesignFields {
   google.protobuf.Any values = 2;
 }
 
+// swagger:model Activities
+message Activities {
+  repeated Activity items = 1;
+}
+
+// swagger:model Activity
+message Activity {
+  string name = 1;
+  bool enable = 2;
+  repeated ActivityField input_fields = 3;
+  repeated ActivityField output_fields = 4;
+}
+
+// swagger:model ActivityField
+message ActivityField {
+  string source_from = 1;
+  string name = 2;
+  string type = 3;
+  bool is_required = 4;
+  bool is_repeated = 5;
+  repeated ActivityField fields = 6;
+  string description = 7;
+}
+
 // swagger:parameters DesignFieldsRequest
 message DesignFieldsRequest {
   // required: true
