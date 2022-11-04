@@ -121,7 +121,7 @@ message SelectListElement {
   // required: true
   string label = 1;
   // required: true
-  string value = 2;
+  uint32 value = 2;
 }
 
 // swagger:model SelectListElements
