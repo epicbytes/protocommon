@@ -126,6 +126,19 @@ message AvailableProvider {
   string provider_type = 3;
 }
 
+// swagger:model SelectListElement
+message SelectListElement {
+  // required: true
+  string label = 1;
+  // required: true
+  uint32 value = 2;
+}
+
+// swagger:model SelectListElements
+message SelectListElements {
+  repeated SelectListElement items = 1;
+}
+
 // swagger:model Pagination
 message Pagination {
   int64 limit = 1;
