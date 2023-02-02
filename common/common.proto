@@ -81,7 +81,7 @@ message Memstores {
 
 message Memstore {
   string model = 1;
-  bool disable_upsert_main = 2;
+  string type = 2;
   bool is_syncable = 3;
 }
 
