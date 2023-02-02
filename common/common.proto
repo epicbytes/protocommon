@@ -75,6 +75,16 @@ message DesignFields {
   google.protobuf.Any values = 2;
 }
 
+message Memstores {
+  repeated Memstore items = 1;
+}
+
+message Memstore {
+  string model = 1;
+  bool disable_upsert_main = 2;
+  bool is_syncable = 3;
+}
+
 // swagger:model Activities
 message Activities {
   repeated Activity items = 1;
