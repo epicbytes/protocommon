@@ -75,10 +75,12 @@ message DesignFields {
   google.protobuf.Any values = 2;
 }
 
+// swagger:model Memstores
 message Memstores {
   repeated Memstore items = 1;
 }
 
+// swagger:model Memstore
 message Memstore {
   string model = 1;
   string type = 2;

@@ -537,6 +537,7 @@ func (x *DesignFields) GetValues() *anypb.Any {
 	return nil
 }
 
+// swagger:model Memstores
 type Memstores struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -584,6 +585,7 @@ func (x *Memstores) GetItems() []*Memstore {
 	return nil
 }
 
+// swagger:model Memstore
 type Memstore struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
